@@ -7,9 +7,6 @@ class ProviderController {
     const providers = await User.findAll({
       where: {
         provider: true,
-        id: {
-          [Op.not]: req.userId,
-        },
       },
       attributes: ['id', 'name', 'email'],
       include: [
