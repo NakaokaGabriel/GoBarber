@@ -1,4 +1,3 @@
-import { Op } from 'sequelize';
 import User from '../models/User';
 import File from '../models/File';
 
