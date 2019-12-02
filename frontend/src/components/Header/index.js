@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, Content, Profile } from './styles';
-
 import logo from '~/assets/purple-logo.svg';
+
+import Notifications from '~/components/Notifications';
+
+import { Container, Content, Profile } from './styles';
 
 export default function Header() {
   return (
@@ -15,6 +17,7 @@ export default function Header() {
         </nav>
 
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>Gabriel Nakaoka</strong>
