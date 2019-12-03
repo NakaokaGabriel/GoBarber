@@ -12,7 +12,7 @@ export default function AvatarInput() {
 
   const ref = useRef();
 
-  // Bug nesse useffect por alguma razão ta bugando a tela e carregando infinito
+  // Agora não aparece o preview do banco de dados
   useEffect(() => {
     if (ref.current) {
       registerField({
@@ -21,7 +21,7 @@ export default function AvatarInput() {
         path: 'dataset.file',
       });
     }
-  }, [ref, registerField]);
+  }, [ref.current]); // eslint-disable-line
 
   async function handleChange(event) {
     const data = new FormData();
